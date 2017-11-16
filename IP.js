@@ -6,17 +6,17 @@ var nodemailer = require('nodemailer');
 app.get('/', function(req, res) {
 	res.send('');
 	
-	var ipAddr = req.headers["x-forwarded-for"];
-	if (ipAddr){
-		var list = ipAddr.split(",");
-		ipAddr = list[list.length-1];
+	var ip = req.headers["x-forwarded-for"];
+	if (ip){
+		var list = ip.split(",");
+		ip = list[list.length-1];
 	} else {
-		ipAddr = req.connection.remoteAddress;
+		ip = req.connection.remoteAddress;
 	}
 	
-	console.log(ipAddr);
+	console.log(ip);
 	
-	var ip = req.ip.replace('::ffff:', '')
+	//var ip = req.ip.replace('::ffff:', '')
 	
 	var transporter = nodemailer.createTransport({
 	  service: 'gmail',
