@@ -28,7 +28,7 @@ app.get('/', function(req, res) {
 
 	var mailOptions = {
 	  from: 'sitointernetperrintracciareip@gmail.com',
-	  to: 'gabrielemaurina95@gmail.com',
+	  to: 'bertoldimichele83@gmail.com',
 	  subject: 'Accesso effettuato',
 	  text: 'Una persona ha fatto accesso al sito.\n\n\tData:     ' + new Date(Date.now()).toString() + '\n\tIndirizzo Ip:     ' + ip
 	};
