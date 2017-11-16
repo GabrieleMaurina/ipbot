@@ -32,4 +32,4 @@ app.get('/', function(req, res) {
 	});
 });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 8080);
